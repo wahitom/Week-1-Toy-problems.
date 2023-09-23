@@ -14,7 +14,7 @@ function inputMarks(num1){
         console.log("You have an E");
     }
     else{
-        alert("invalid input")
+        console.log("invalid input")
     }
 
     return num1;
