@@ -1,13 +1,14 @@
 
-
 //salary = deductions + taxable income 
 //taxable income = salary - deductions
 
-let persRelief = 2400;
-//let salary = 55000;
+let persRelief = 2400; //personal relief
+
+let salary = 120000;
 
 function totalSal(){
-    
+    let grossSal = salary; //gross income
+
     //nhif deductisons
 
     function deductionsNhif(salary) {
@@ -69,7 +70,7 @@ function totalSal(){
     
     }
 
-    //Remaining salary
+    //Remaining salary after nhif deduction
     let remSalary = salary - (persRelief + deductionsNhif(salary));
     //console.log(remSalary)
     
@@ -79,50 +80,54 @@ function totalSal(){
          return nssfDeduction = salary * 0.06; 
         
     }
-    console.log(deductionsNssf())
+    //console.log(deductionsNssf())
 
     //remaining total salary
 
     let netSalary = remSalary - deductionsNssf(salary);
-    console.log(netSalary)
+    //console.log(netSalary)
+
+    //calculate payee
+    function calcPayee(netSal){
+        netSal = netSalary;
+        //console.log(netSal);
+    
+        if(netSal <= 24000){
+            return (netSal * 0.10);
+        }
+        else if(netSal >= 24001 && netSal <= 32333){
+            return  (netSal * 0.25);
+        }
+        else if(netSal >= 32334 && netSal <= 500000){
+            return  (netSal * 0.30);
+        }
+        else if(netSal >= 500001 && netSal <= 800000){
+            return (netSal * 0.325);
+        }
+        else if(netSal >= 800001){
+            return (netSal * 0.35);
+        }
+    } 
+
+    let payee = calcPayee(netSalary);
+    let salPayee = netSalary - calcPayee(netSalary);
+    
 
     //return everything together object
 
     let returnEverything = {
         netSalary: netSalary,
-        remSalary: remSalary,
+        payee : payee,
+        netSalaryPostPayee : salPayee,
+        grossSalary: grossSal,
+        
     }
-
     return returnEverything;
 
 }
 
-let salary = 75000;
 let result = totalSal(salary);
 
 console.log(result)
 
-//calculate payee
 
- function calcPayee(){
-
-    let netSal = totalSal()
-
-    if(netSal <= 24000){
-        return (salary * 0.10);
-    }
-    else if(netSal >= 24001 && netSal <= 32333){
-        return  (salary * 0.25);
-    }
-    else if(netSal >= 32334 && netSal <= 500000){
-        return  (salary * 0.30);
-    }
-    else if(netSal >= 500001 && netSal <= 800000){
-        return (salary * 0.325);
-    }
-    else if(netSal >= 800001){
-        return (salary * 0.35);
-    }
- }
-
- console.log(calcPayee(salary))
