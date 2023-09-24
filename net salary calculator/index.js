@@ -120,7 +120,8 @@ function totalSal(){
         payee : payee,
         netSalaryPostPayee : salPayee,
         grossSalary: grossSal,
-        
+        nhifDeduction: deductionsNhif(salary),
+        nssfDeduction : deductionsNssf(salary),   
     }
     return returnEverything;
 
