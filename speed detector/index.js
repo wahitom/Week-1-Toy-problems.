@@ -23,7 +23,6 @@ function calculateSpeed(num1){  //input our speed here in num1
 
     return num1;
 }
-//const prompt1 = prompt("Enter the car's speed (in km/h):")
 
 console.log(calculateSpeed(131))
 
