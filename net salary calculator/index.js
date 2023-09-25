@@ -4,7 +4,10 @@
 
 let persRelief = 2400; //personal relief
 
-let salary = 120000;
+let salary = 120000; // salary input
+
+let result = totalSal(salary); //calculate your input and gives 
+
 
 function totalSal(){
     let grossSal = salary; //gross income
@@ -127,7 +130,6 @@ function totalSal(){
 
 }
 
-let result = totalSal(salary);
 
 console.log(result)
 
