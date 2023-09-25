@@ -13,17 +13,17 @@
 
 ## How to complete this challenge 
 
+# Get button element from index.html
+
+In this step you add a button in your index.html. After that getElementsById() can be used to get the button from your html and properties can be added to it
+
 # Create a function 
 
-The first step is to create a function which will hold the statements required to carry out the project. In this step name the function appropriately then add a parameter which will represent the grade input.
+The first step is to create a function which will hold the statements required to carry out the project. In this step the function is found inside the event listener added for the prompt. 
 
 # In the function 
 
-in the function start an if else statement and put the conditions for the A requirements which will look like this **<if(num1 > 79 && num1 <= 100){console.log("You have an A");}>** which states that for the input between 79-100 the output should be an A. This is done for all the subsequent values using **else if(){}**
-
-# Invoke the function 
-
-Lastly the function is invoked in the console log and the marks input is put in between the brackets
+in the function start an if else statement and put the conditions for the A requirements which will look like this **<if(num1 > 79 && num1 <= 100){alert("You have an A");}>** which states that for the input between 79-100 the output should be an A. This is done for all the subsequent values using **else if(){}**. When the user inputs their marks it should then give an alert of their grade
 
 
 # Challenge 2: Speed Detector (Toy Problem);
@@ -35,17 +35,16 @@ Lastly the function is invoked in the console log and the marks input is put in 
 * For every 5km/s above the speed limit ie 70 it should give the driver one demerit 
 * If the driver gets more than 12 demerit points the function should print "License suspended"
 
-# Create a function 
+# Get button element from index.html
 
-Create a function that will calculate the speed input and put a parameter. Create a variable for the speed limit, another for the difference between the speed limit and the speed input if the speed input is above speed limit, and lastly one that calculates the demerit points.
+In this step you add a button in your index.html. After that getElementsById() can be used to get the button from your html and properties can be added to it
+
 
 # Use an if else statement 
 
 Next an if statement will be used to check if the user is below the speed limit and what to expect at every level. On the last section of the if else statemen the "License suspended" message should be included.
 
-# Invoke the function 
-
-Lastly the function is invoked in the console log and the speed input is put in between the brackets
+Lastly with the button added one can press it for the prompt to input data and it will give an alert for the correct speed output 
 
 # Challenge 3: Net Salary Calculator (Toy Problem)
 
