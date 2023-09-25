@@ -7,7 +7,8 @@
 * The output the user gets should correspond with the correct grade shown below
         ** A > 79 
         ** B 60 to 79
-        ** D 49 to 59
+        ** C 49 to 59
+        ** D 40 to 49
         ** E > 40 
 
 ## How to complete this challenge 
